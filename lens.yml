@@ -1,11 +1,11 @@
 # RESOURCE META SECTION
-name: retail360np # Lens Resource name (mandatory)
+name: retail360testnp # Lens Resource name (mandatory)
 version: v1alpha # Lens manifest version (mandatory)
 layer: user # DataOS Layer (optional)
 type: lens # Type of Resource (mandatory)
 tags: # Tags (optional)
   - lens
-description: sales360 lens2 deployment on DataOS # Lens Resource description (optional)
+description: retail360 lens2 deployment on DataOS # Lens Resource description (optional)
 
 # LENS-SPECIFIC SECTION
 lens:
@@ -21,7 +21,7 @@ lens:
     url: https://github.com/NandaAtModern/lens_testing/ # URL of repository containing the Lens2 model (mandatory)
     lensBaseDir: lens_testing/model # Relative path of the Lens2 'model' directory in repository (mandatory)
     syncFlags: # Additional flags used during synchronization, such as specific branch.
-      - --ref=main # Repository Branch 
+      - --ref=master # Repository Branch 
   api: # API Instances configuration (optional)
     replicas: 1 # Number of API instance replicas (optional)
     logLevel: info  # Logging granularity (optional)
