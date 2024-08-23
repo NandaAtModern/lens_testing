@@ -1,5 +1,5 @@
 # RESOURCE META SECTION
-name: sales360test # Lens Resource name (mandatory)
+name: retail360np # Lens Resource name (mandatory)
 version: v1alpha # Lens manifest version (mandatory)
 layer: user # DataOS Layer (optional)
 type: lens # Type of Resource (mandatory)
@@ -11,15 +11,15 @@ description: sales360 lens2 deployment on DataOS # Lens Resource description (op
 lens:
   compute: runnable-default # Compute Resource that Lens should utilize (mandatory)
   secrets: # Referred Instance-secret configuration (**mandatory for private code repository, not required for public repository)
-    - name: githubr # Referred Instance Secret name (mandatory)
+    - name: githubnp # Referred Instance Secret name (mandatory)
       allKeys: true # All keys within the secret are required or not (optional)
   source: # Data Source configuration
     type: minerva # Source type 
     name: system # Source name
     catalog: icebase #in case of minerva or themis
   repo: # Lens2 model code repository configuration (mandatory)
-    url: https://github.com/Aayushitmdc/lens2/ # URL of repository containing the Lens2 model (mandatory)
-    lensBaseDir: lens2/model # Relative path of the Lens2 'model' directory in repository (mandatory)
+    url: https://github.com/NandaAtModern/lens_testing/ # URL of repository containing the Lens2 model (mandatory)
+    lensBaseDir: lens_testing/model # Relative path of the Lens2 'model' directory in repository (mandatory)
     syncFlags: # Additional flags used during synchronization, such as specific branch.
       - --ref=main # Repository Branch 
   api: # API Instances configuration (optional)
