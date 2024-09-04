@@ -7,7 +7,7 @@ tables:
     joins:
       - name: transactions
         relationship: one_to_many
-        sql: "{TABLE.customer_id} = {transaction.customer_id}"
+        sql: "{TABLE.customer_id} = {transactions.customer_id}"
 
     dimensions:
       - name: customer_id
