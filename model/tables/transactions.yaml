@@ -5,11 +5,7 @@ tables:
     joins:
       - name: products
         relationship: many_to_one
-        sql: "{TABLE.skuid}= {products.skuid}"   
-
-      # - name: channel
-      #   relationship: many_to_one
-      #   sql: "{TABLE.store_id}= {channel.store_id}"           
+        sql: "{TABLE.skuid}= {products.skuid}"           
 
     dimensions:
       - name: transaction_id
