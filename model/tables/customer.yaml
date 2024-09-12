@@ -182,7 +182,7 @@ tables:
 
       - name: young_female_customers
         public: true
-        sql: "{TABLE}.gender='FEMALE' and {TABLE}.age <30 and {TABLE}.age>20 " 
+        sql: "{TABLE}.gender='FEMALE' and {TABLE}.age <30 and {TABLE}.age>20" 
         meta:
         secure:
           user_groups: 
