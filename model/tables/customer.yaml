@@ -189,7 +189,7 @@ tables:
               includes:
                 - type_analyst
               excludes:
-              - default 
+                - default 
 
     
       

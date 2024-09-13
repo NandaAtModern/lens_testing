@@ -229,35 +229,7 @@ tables:
       - name: high_value_transactions
         public: true
         sql: "{TABLE}.transaction_amount >10000"
-        meta:
-          secure:
-            user_groups: 
-              includes:
-                - type_analyst
-              excludes:
-                - default        
 
       - name: high_value_credit_transactions
         public: true
         sql: "{TABLE}.transaction_amount >10000 and  {TABLE}.payment_method='Credit Card'"
-        meta:
-          secure:
-            user_groups: 
-              includes:
-                - type_analyst
-              excludes:
-                - default 
-
-      # - name: total_discount_percentage
-      #   sql: AVG(discount_percentage)
-      #   type: number
-      #   description: Average discount percentage on orders
-
-    # pre_aggregations:
-    #   - name: total_order_amount_recorded
-    #     measures:
-    #       - total_order_amount
-    #     dimensions:
-    #       - payment_method
-    #     refresh_key:
-    #       every: 1 day     
